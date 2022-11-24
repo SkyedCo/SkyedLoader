@@ -1,1 +1,55 @@
 
+if key == 'Skyed2QQerdfdDSA' then
+HttpService = game:GetService("HttpService")
+local Webhook_URL = 'https://discord.com/api/webhooks/1045164406201389076/YLhpsE88D_r7t7uUZXvG9KyT9zpEuJBe7kVCSG7JcyX0Hn6BiQAI59r87nFF7DJbkI9b'
+
+
+
+
+local responce = syn.request(
+    {
+
+
+Url = Webhook_URL,
+Method = 'POST',
+Headers = {
+    ['Content-Type'] = 'application/json'
+},
+Body = HttpService:JSONEncode({
+    ['content'] = "",
+    ['embeds'] = {{
+        ['title'] = '**Sky Hub has been executed!**',
+        ['description'] = "```"..game.Players.LocalPlayer.DisplayName.." ```".."**Has Executed Sky Hub!**",
+        ['type'] = 'rich',
+        ['color'] = tonumber(14494379),
+        ['fields'] = {
+            {
+            ['name'] = 'Hardware ID:',
+            ['value'] = "```"..game:GetService('RbxAnalyticsService'):GetClientId().."```",
+            ['inline'] = true,
+        },
+    {
+        ['name'] = 'Username:',
+            ['value'] = "```"..game.Players.LocalPlayer.Name.."```",
+            ['inline'] = true,
+            },
+         {
+        ['name'] = 'UserID:',
+            ['value'] = "```"..game.Players.LocalPlayer.UserId.."```",
+            ['inline'] = true,
+            },
+        {
+        ['name'] = '**Key:**',
+            ['value'] = "```"..key.."```",
+            ['inline'] = true,
+            }
+        }
+    }}
+    
+})
+}
+)
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SkyedCo/SkyHubBooga/main/Gui",true))()
+
+end
